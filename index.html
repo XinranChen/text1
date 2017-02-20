@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SAFS_Found_UI_Demo</title>   
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/Site.css">
+</head>
+<body>
+<div class="left-frame">
+    <div class="left-frame-menu">
+        <h1>样式索引</h1>
+        <h5>-文件名称</h5>
+        <ul>
+            <li>theme.css</li>
+        </ul>
+        <h5>-依赖文件</h5>
+        <ul>
+            <li>bootstrap.css</li>
+            <li>jquery.js</li>
+            <li>bootstrap-treeview.js</li>
+        </ul>
+        <h5>-所有组件</h5>
+        <ul>
+            <li><a href="">面板panel</a></li>
+            <li><a href="#sa-noWarpTable">表格noWarpTable</a></li>
+            <li><a href="">表格infoTable</a></li>
+            <li><a href="">按钮button</a></li>
+            <li><a href="">翻页swich</a></li>
+            <li><a href="">表单input</a></li>
+            <li><a href="">表单域textarea</a></li>
+            <li><a href="">下拉单选框select</a></li>
+            <li><a href="">标签lable</a></li>
+            <li><a href="#sa-tree">树结构tree</a></li>
+            <li><a href="">单选radio</a></li>
+            <li><a href="#sa-pagination">分页切换pagination</a></li>
+        </ul>
+        <h5>-改进方向</h5>
+        <ul>
+            <li>如何做一套符合我们项目需求的前端框架呢？</li>
+            <li>能不能不要写那么多class了？</li>
+            <li>后端只需使用</li>
+            <li>&lt;safs-button&gt;</li>
+            <li>&lt;/safs-button&gt;</li>
+            <li>标签就OK啦！</li>
+        </ul>
+    </div>
+</div>
+<div class="right-frame">
+    <h1>前端组件样式规范vs1.0.2</h1>
+    <hr>  
+    <h3>面板class="sa-panel"</h3>    
+    <div class="sa-panel" style="height: 100px">        
+    </div>
+    <h3>表格class="sa-noWarpTable"</h3>
+    <div class="sa-panel">
+    	<table class="sa-noWarpTable">
+            <thead>
+                <tr>
+                    <th>产品名称</th>
+                    <th>总金额（亿）</th>
+                    <th>产品状态</th>
+                    <th>资产类型</th>
+                    <th>成立时间</th>
+                    <th>到期时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="">企富2016-2</a></td>
+                    <td>48.58</td>
+                    <td>发行期</td>
+                    <td>企业贷款</td>
+                    <td>2016-10-21</td>
+                    <td>2028-11-15</td>
+                </tr>
+                <tr>
+                    <td><a href="">中盈2016-2</a></td>
+                    <td>103.52</td>
+                    <td>发行期</td>
+                    <td>住房抵押贷款</td>
+                    <td>2015-02-30</td>
+                    <td>2018-07-30</td>
+                </tr>
+                <tr>
+                    <td><a href="">庆春2016-1</a></td>
+                    <td>22.22</td>
+                    <td>存续期</td>
+                    <td>个人消费贷款</td>
+                    <td>2014-05-12</td>
+                    <td>2022-02-18</td>
+                </tr>
+                <tr>
+                    <td><a href="">和萃2016-3</a></td>
+                    <td>6.43</td>
+                    <td>存续期</td>
+                    <td>不良资产重组</td>
+                    <td>2018-10-17</td>
+                    <td>2025-08-18</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+    <pre style="height: 300px">
+        <code class="language-markup"> 
+&lt;!-- 用法示例 --&gt;     
+&lt;table class=&quot;sa-noWarpTable&quot;&gt;
+   &lt;thead&gt;
+       &lt;tr&gt;
+           &lt;th&gt;产品名称&lt;/th&gt;
+           &lt;th&gt;总金额（亿）&lt;/th&gt;
+           &lt;th&gt;产品状态&lt;/th&gt;
+           &lt;th&gt;资产类型&lt;/th&gt;
+           &lt;th&gt;成立时间&lt;/th&gt;
+           &lt;th&gt;到期时间&lt;/th&gt;
+       &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+       &lt;tr&gt;
+           &lt;td&gt;&lt;a href=&quot;&quot;&gt;企富2016-2&lt;/a&gt;&lt;/td&gt;
+           &lt;td&gt;48.58&lt;/td&gt;
+           &lt;td&gt;发行期&lt;/td&gt;
+           &lt;td&gt;企业贷款&lt;/td&gt;
+           &lt;td&gt;2016-10-21&lt;/td&gt;
+           &lt;td&gt;2028-11-15&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;&lt;a href=&quot;&quot;&gt;中盈2016-2&lt;/a&gt;&lt;/td&gt;
+           &lt;td&gt;103.52&lt;/td&gt;
+           &lt;td&gt;发行期&lt;/td&gt;
+           &lt;td&gt;住房抵押贷款&lt;/td&gt;
+           &lt;td&gt;2015-02-30&lt;/td&gt;
+           &lt;td&gt;2018-07-30&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;&lt;a href=&quot;&quot;&gt;庆春2016-1&lt;/a&gt;&lt;/td&gt;
+           &lt;td&gt;22.22&lt;/td&gt;
+           &lt;td&gt;存续期&lt;/td&gt;
+           &lt;td&gt;个人消费贷款&lt;/td&gt;
+           &lt;td&gt;2014-05-12&lt;/td&gt;
+           &lt;td&gt;2022-02-18&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+           &lt;td&gt;&lt;a href=&quot;&quot;&gt;和萃2016-3&lt;/a&gt;&lt;/td&gt;
+           &lt;td&gt;6.43&lt;/td&gt;
+           &lt;td&gt;存续期&lt;/td&gt;
+           &lt;td&gt;不良资产重组&lt;/td&gt;
+           &lt;td&gt;2018-10-17&lt;/td&gt;
+           &lt;td&gt;2025-08-18&lt;/td&gt;
+       &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt; 
+        </code>
+    </pre>    
+    <h3>按钮class="sa-button"</h3>
+    <div class="sa-panel">
+        <button class="sa-button">确定</button>
+        <button class="sa-button">取消</button>
+    </div>
+    <h3>按钮class="sa-swich"</h3>
+    <div class="sa-panel">
+        <button class="sa-swich">《</button>
+        <button class="sa-swich">》</button>
+    </div>     
+    <h3>表单class="sa-input"</h3>
+    <div class="sa-panel">
+        <form action="form_action.asp" method="get">
+          用户名: 
+          <input type="text" name="fname" class="sa-input"/>
+          密码: 
+          <input type="text" name="lname" class="sa-input"/>
+          <input type="submit" value="提交" class="sa-button"/>
+          <input type="reset" value="重置" class="sa-button">
+        </form>
+    </div>
+    <h3>表单域class="sa-textarea"</h3>
+    <div class="sa-panel">
+        <textarea class="sa-textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+    </div>
+    <h3>下拉单选框class="sa-select"</h3>
+    <div class="sa-panel">
+        <select class="sa-select">
+          <option value ="volvo">选项1</option>
+          <option value ="saab">选项2</option>
+          <option value="opel">选项3</option>
+          <option value="audi">选项4</option>
+        </select>
+    </div>
+    <h3>标签class="sa-lable"</h3>
+    <div class="sa-panel">
+        <lable class="sa-lable">基本信息</lable>
+        <lable class="sa-lable">公司信息</lable>
+    </div>
+    <h3>树结构class="sa-tree"</h3>    
+    <div class="sa-panel" style="width: 300px">
+        <div id="tree" class="sa-tree"></div>
+    </div>
+    <pre>
+        <code class="language-markup"> 
+&lt;!-- html结构 --&gt;
+&lt;div id=&quot;tree&quot; class=&quot;sa-tree&quot;&gt;&lt;/div&gt;
+        </code>
+    </pre>
+    <pre style="height: 300px;">
+        <code class="language-javascript">
+//javascript结构         
+function getTree() {
+    //树结构-数据注入
+    var data = [
+      {
+        text: "总经理",
+        showTags: true,
+        nodes: [
+          {
+            text: "销售部营销主管",
+            tags: ['2'],
+            nodes: [
+              {
+                text: "营销专员",
+                tags: ['1']
+              },
+              {
+                text: "营销实习生",
+                tags: ['1']
+              }
+            ]
+          },
+          {
+            text: "市场部经理",
+            tags: ['1']
+          }
+        ]
+      },
+      {
+        text: "董事长",
+        tags: ['1']
+      },
+      {
+        text: "Parent 3"
+      },
+      {
+        text: "Parent 4"
+      },
+      {
+        text: "Parent 5"
+      }
+    ];
+    return data;
+}
+// 调用bootstrap-treeview.js中封装方法对数据渲染    
+$('#tree').treeview({data: getTree(),showTags: true});
+        </code>
+    </pre>    
+    <h3>单选class="sa-radio"</h3>
+    <div class="sa-panel">
+        <form action="form_action.asp" method="get">
+          <input type="radio" name="identity" value="正确" checked="checked"/>
+          <lable class="sa-lable">正确</lable>
+          <input type="radio" name="identity" value="错误"/>
+          <lable class="sa-lable">错误</lable>
+          <input type="submit" value="提交" class="sa-button"/>
+        </form>
+    </div>
+    <h3>分页切换class="sa-pagination"</h3>
+    <div class="sa-panel">
+        <table class="sa-noWarpTable">
+            <thead></thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                       <div class="pagination-container sa-pagination">
+                           <ul class="pagination">
+                               <li class="active"><a>1</a></li>
+                               <li><a href="/Menu?page=2">2</a></li>
+                               <li><a href="/Menu?page=3">3</a></li>
+                               <li><a href="/Menu?page=4">4</a></li>
+                               <li class="PagedList-skipToNext"><a href="/Menu?page=2" rel="next">»</a></li>
+                           </ul>
+                       </div>
+                    </td>
+                </tr>
+            </tfoot>    
+        </table>
+    </div>
+    <pre>
+        <code class="language-markup"> 
+&lt;!-- html结构 --&gt;
+&lt;div class=&quot;pagination-container sa-pagination&quot;&gt;
+   &lt;ul class=&quot;pagination&quot;&gt;
+       &lt;li class=&quot;active&quot;&gt;&lt;a&gt;1&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;/Menu?page=2&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;/Menu?page=3&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;/Menu?page=4&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+       &lt;li class=&quot;PagedList-skipToNext&quot;&gt;&lt;a href=&quot;/Menu?page=2&quot; rel=&quot;next&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+        </code>
+    </pre>
+<!-- 返回顶部按钮 -->
+<button class="back-to-top" style="display: none;"></button>
+<!-- require.js脚本模块化设计 -->
+<script src="js/require.js" data-main="js/main.js" defer async="true">  
+</script> 
+</body>
+</html>
